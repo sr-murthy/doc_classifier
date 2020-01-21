@@ -10,11 +10,11 @@ Scoring Formula
 
 The scoring formula is given by
 
-    ![Scoring formula](static/scoring_formula_indented.gif)
+    ![Scoring formula](src/static/scoring_formula_indented.gif)
 
-where ![](static/W_12pt.gif) is the set of ![](static/r_12pt.gif) keywords ![](static/keywords.gif) to search for, ![](static/C_12pt.gif) is the set of ![](static/columns.gif) columns in which to perform the keyword search, and ![](static/indicator_function_12pt.gif) is an indicator function for the presence of keywords in column entries ![](static/c_i,j_12pt.gif) given by
+where ![](src/static/W_12pt.gif) is the set of ![](src/static/r_12pt.gif) keywords ![](src/static/keywords.gif) to search for, ![](src/static/C_12pt.gif) is the set of ![](src/static/columns.gif) columns in which to perform the keyword search, and ![](src/static/indicator_function_12pt.gif) is an indicator function for the presence of keywords in column entries ![](src/static/c_i,j_12pt.gif) given by
 
-    ![Indicator function for keywords in column entries](static/indicator_function_indented.gif)
+    ![Indicator function for keywords in column entries](src/static/indicator_function_indented.gif)
 
 Usage examples.
 
