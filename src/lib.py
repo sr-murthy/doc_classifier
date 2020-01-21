@@ -1,5 +1,5 @@
 __all__ = [
-    'classify'
+    'classify',
     'get_doc_class_map',
     'score'
 ]
