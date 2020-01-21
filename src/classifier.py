@@ -33,7 +33,7 @@ def classify(doc_type, doc_fp, search_columns):
     if 'name' in df.columns:
         df.rename(columns={'name': col_name for col_name in search_columns}, inplace=True)
     df.dropna(axis=0, subset=search_columns, inplace=True)
-    line_items = df.loc[:, search_columns].values.ravel('F')
+    line_items = df.loc[:, search_columns].values.ravel('F').tolist()
     class_map = get_doc_class_map(doc_type)
     scores = sorted(
         [(k, score(line_items, v)) for k, v in class_map.items()],
