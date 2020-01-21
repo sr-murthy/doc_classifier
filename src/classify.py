@@ -1,5 +1,11 @@
 #!/usr/bin/env python
 
+__all__ = [
+    'classify'
+    'get_doc_class_map',
+    'score'
+]
+
 import argparse
 import io
 import json

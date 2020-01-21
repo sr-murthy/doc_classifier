@@ -27,7 +27,7 @@ Usage
 
 Here's a simple example of classifying a sample income statement with only a single keywords-search column .
 
-    [path/to/doc_classifier/src]$ ./classifier.py -t 'financial statements' -f ../sample_data/income_statement/microsoft.csv --verbose
+    [path/to/doc_classifier/src]$ ./classify.py -t 'financial statements' -f ../sample_data/income_statement/microsoft.csv --verbose
 
     Classification: income
     Keywords score map: {
@@ -38,7 +38,7 @@ Here's a simple example of classifying a sample income statement with only a sin
 
 This is an example of classifying a sample income statement with multiple keywords-search columns.
 
-    [/path/to/doc_classifier/src]$ ./classifier.py -t 'financial statements' -f ../sample_data/income_statement/microsoft2.csv  -c 'line item 1, line item 2' --verbose
+    [/path/to/doc_classifier/src]$ ./classify.py -t 'financial statements' -f ../sample_data/income_statement/microsoft2.csv  -c 'line item 1, line item 2' --verbose
 
     Classification: income
     Keywords score map: {
