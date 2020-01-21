@@ -1,7 +1,7 @@
 Document Classifier
 ===================
 
-Document classification tool based on a document type-dependent keywords class map and a simple normalised keyword frequency-in-columns score.
+Document classification tool based on a domain-dependent, keywords-based document class map and a simple keyword frequency score.
 
 Currently only financial statements (in CSV format) can be classified. A keyword-based class map for a given document type (stored as a JSON file in `src/static`) is used to create a frequency score for keywords occurring in a user-specified list of columns in the CSV document.
 
