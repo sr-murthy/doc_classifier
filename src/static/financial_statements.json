@@ -1,0 +1,22 @@
+{
+    "income": [
+        "income",
+        "gross income",
+        "net income",
+        "pretax income",
+        "pre-tax income",
+        "operating cost",
+        "operating expense"
+    ],
+    "balance sheet": [
+        "shareholders",
+        "assets",
+        "liabilities",
+        "equity"
+    ],
+    "cash flow": [
+        "cash",
+        "cash balance",
+        "cash flow"
+    ]
+}
