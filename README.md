@@ -1,7 +1,7 @@
 Document Classifier
 ===================
 
-Document classification tool based on a simple keyword frequency-in-columns score.
+Document classification tool based on a document type-dependent keywords class map and a simple normalised keyword frequency-in-columns score.
 
 Currently only financial statements (in CSV format) can be classified. A keyword-based class map for a given document type (stored as a JSON file in `src/static`) is used to create a frequency score for keywords occurring in a user-specified list of columns in the CSV document.
 
@@ -16,14 +16,14 @@ where ![](src/static/w_12pt.gif) is the set of ![](src/static/r_12pt.gif) keywor
 
 <div style="text-align:center"><img src="src/static/indicator_function_indented.gif" alt="Indicator function"/>
 
-Given a CSV document ![](src/static/D_12pt.gif) of type ![](src/static/T_12pt.gif), with ![](src/static/small_t_12pt.gif) classes ![](src/static/classes.gif) defined in its class keywords map (a JSON file with keys being the class names/IDs ![](src/static/classes.gif) and values being lists of keywords associated with the classes), and ![](src/static/C_12pt.gif) being the user-defined set of columns to use as the basis for classification, the classification function is given by
+Given a CSV document ![](src/static/D_12pt.gif) of type ![](src/static/T_12pt.gif), with ![](src/static/small_t_12pt.gif) classes ![](src/static/classes.gif) defined in its class keywords map (a JSON file with keys being the class names/IDs ![](src/static/classes.gif) and values being lists of keywords associated with the classes), and ![](src/static/C_12pt.gif) being the user-defined set of columns in which to perform the keywords search, the classification function is given by
 
 <div style="text-align:center"><img src="src/static/classify_function_indented.gif" alt="Classification function"/>
 
 Usage
 -----
 
-Examples below.
+Here's a simple example of classifying a sample income statement with only a single keywords-search column .
 
     [path/to/doc_classifier/src]$ ./classifier.py -t 'financial statements' -f ../sample_data/income_statement/microsoft.csv
 
@@ -35,5 +35,16 @@ Examples below.
     Keywords score map: {
         "income": 0.03428571428571429,
         "cash flow": 0.013333333333333334,
+        "balance sheet": 0.0
+    }
+
+This is an example of classifying a sample income statement with multiple keywords-search columns.
+
+    [/path/to/doc_classifier/src]$ ./classifier.py -t 'financial statements' -f ../sample_data/income_statement/microsoft2.csv  -c 'line item 1, line item 2' --verbose
+
+    Classification: income
+    Keywords score map: {
+        "income": 0.025714285714285714,
+        "cash flow": 0.006666666666666667,
         "balance sheet": 0.0
     }
