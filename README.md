@@ -10,11 +10,11 @@ Scoring Formula
 
 The scoring formula is given by
 
-![Scoring formula](src/static/scoring_formula_indented.gif)
+<div style="text-align:center"><img src="src/static/scoring_formula_indented.gif" alt="Scoring formula"/>
 
-where ![](src/static/W_12pt.gif) is the set of ![](src/static/r_12pt.gif) keywords ![](src/static/keywords.gif) to search for, ![](src/static/C_12pt.gif) is the set of ![](src/static/columns.gif) columns in which to perform the keyword search, and ![](src/static/indicator_function_12pt.gif) is an indicator function for the presence of keywords in column entries ![](src/static/c_j,k_12pt.gif) given by
+where ![](src/static/w_12pt.gif) is the set of ![](src/static/r_12pt.gif) keywords ![](src/static/keywords.gif) to search for, ![](src/static/C_12pt.gif) is the set of ![](src/static/m_12pt.gif) columns ![](src/static/columns.gif) in which to perform the keyword search (the ![](src/static/j_12pt.gif)-th column containing ![](src/static/m_12pt.gif) strings ![](src/static/column_strings.gif)), and ![](src/static/indicator_function_12pt.gif) is an indicator function for the presence of keywords in the ![](src/static/nm_12pt.gif) column entries ![](src/static/c_j,k_12pt.gif) given by
 
-![Indicator function for keywords in column entries](src/static/indicator_function_indented.gif)
+<div style="text-align:center"><img src="src/static/indicator_function_indented.gif" alt="Indicator function"/>
 
 Usage examples.
 
