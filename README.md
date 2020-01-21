@@ -16,6 +16,8 @@ where ![](src/static/w_12pt.gif) is the set of ![](src/static/r_12pt.gif) keywor
 
 <div style="text-align:center"><img src="src/static/indicator_function_indented.gif" alt="Indicator function"/>
 
+Note: the scoring function is guaranteed to be a value between 0 and 1 (inclusive) as the frequency score (numerator in the scoring function) can be a maximum of ![](src/static/rmn_12pt.gif).
+
 Given a CSV document ![](src/static/D_12pt.gif) of type ![](src/static/T_12pt.gif), with ![](src/static/small_t_12pt.gif) classes ![](src/static/classes.gif) defined in its class keywords map (a JSON file with keys being the class names/IDs ![](src/static/classes.gif) and values being lists of keywords associated with the classes), and ![](src/static/C_12pt.gif) being the user-defined set of columns in which to perform the keywords search, the classification function is given by
 
 <div style="text-align:center"><img src="src/static/classify_function_indented.gif" alt="Classification function"/>
@@ -24,10 +26,6 @@ Usage
 -----
 
 Here's a simple example of classifying a sample income statement with only a single keywords-search column .
-
-    [path/to/doc_classifier/src]$ ./classifier.py -t 'financial statements' -f ../sample_data/income_statement/microsoft.csv
-
-    Classification: income
 
     [path/to/doc_classifier/src]$ ./classifier.py -t 'financial statements' -f ../sample_data/income_statement/microsoft.csv --verbose
 
